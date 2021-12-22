@@ -36,7 +36,7 @@ export const HomeView: FC = ({}) => {
             </button>
           </div>
           <div className="flex-1 px-2 mx-2">
-            <span className="text-lg font-bold">SolCapys</span>
+            <span className="text-lg font-bold">0euvreAI</span>
           </div>
           <div className="flex-none">
             <WalletMultiButton className="btn btn-ghost" />
@@ -50,29 +50,29 @@ export const HomeView: FC = ({}) => {
             <div className="text-center hero-content">
               <div className="max-w-lg">
                 <h1 className="mb-5 text-5xl font-bold">
-                  Hello SolCapys <SolanaLogo /> World!
+                  Welcome 0euvreAI!
                 </h1>
                 <p className="mb-5">
-                  This app lets you check your claiming link easier!
+                  This app will let you claim your SecondGen NFT!
                 </p>
                 <p className="mb-5">
-                  Check your Claiming Link mates!! Connect your Wallet!
+                  Connect your wallet to see if it has an eligible drop.
                 </p>
                 <p>
                   {publicKey ? <>Your address: {publicKey.toBase58()}</> : null}
                 </p>
                 <p>
-                {publicKey ? <>{urlClaim ? <>Your Claim Url:</> : <>You can't Claim</> }</> : null}
+                {publicKey ? <>{urlClaim ? <>Your Claim Url:</> : <>No NFTs to Claim.</> }</> : null}
                   
                 </p>
                 {urlClaim ? <>
-                <button onClick={clickHandle} className="btn btn-primary">Claim $PONQUE</button>
+                <button onClick={clickHandle} className="btn btn-primary">Claim 0euvreAI NFT</button>
                 </> : null}
               </div>
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <h1 className="mb-5 text-5xl">Options:</h1>
             <ul>
               <li>
@@ -83,7 +83,7 @@ export const HomeView: FC = ({}) => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
