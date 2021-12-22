@@ -21,8 +21,11 @@ export const HomeView: FC = ({}) => {
     urlClaim = links.find((x: { handle: { toString: () => string; }; }) => x.handle.toString() === publicKey!.toString());
   }
 
-  const clickHandle = () => {
-    document.location.href = urlClaim.url;
+    const clickHandle = () => {
+        window.open(
+            urlClaim.url,
+            '_blank' // <- This is what makes it open in a new window.
+        );    
   }
 
   return (
