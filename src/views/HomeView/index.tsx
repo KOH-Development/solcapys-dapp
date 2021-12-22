@@ -18,7 +18,6 @@ export const HomeView: FC = ({}) => {
   const onClick = () => {};
 
   if(publicKey!=null){
-
     urlClaim = links.find((x: { handle: { toString: () => string; }; }) => x.handle.toString() === publicKey!.toString());
   }
 
@@ -66,7 +65,7 @@ export const HomeView: FC = ({}) => {
                   
                 </p>
                 {urlClaim ? <>
-                <button onClick={clickHandle} className="btn btn-primary">Claim 0euvreAI NFT</button>
+                <button onClick={clickHandle} className="btn btn-primary">Claim 0euvreAI NFT(s)</button>
                 </> : null}
               </div>
             </div>
